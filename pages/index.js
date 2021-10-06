@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="max-w-xl w-full px-4">
         <p className="text-gray-500 text-sm">
-          Select the classes and hover to see a preview
+          Select an HTML snippet and hover to preview:
         </p>
         <div className="shadow border h-64 mt-4">
           <Editor />

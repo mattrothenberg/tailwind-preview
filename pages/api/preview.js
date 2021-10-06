@@ -17,7 +17,7 @@ export default async function helloAPI(req, res) {
       <script src="https://cdn-tailwindcss.vercel.app/"></script>
       </head>
       <div class="flex items-center justify-center h-screen">
-      <div class="${text}"></div>
+      ${text}
       </div>
       </html>
       `,
