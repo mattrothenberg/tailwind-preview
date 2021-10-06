@@ -19,6 +19,7 @@ export default async function helloAPI(req, res) {
 
     res.status(200).json({ source: image.toString("base64") });
   } catch (e) {
+    console.log(e);
     res.status(500).send("An error occurred", e);
   }
 }
