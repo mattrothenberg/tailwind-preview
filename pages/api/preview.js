@@ -1,10 +1,16 @@
 import nodeHtmlToImage from "node-html-to-image";
+import chrome from "chrome-aws-lambda";
 
 export default async function helloAPI(req, res) {
   const { text } = req.query;
 
   try {
     const image = await nodeHtmlToImage({
+      puppeteerArgs: {
+        args: chrome.args,
+        executablePath: await chrome.executablePath,
+        headless: chrome.headless,
+      },
       html: `
       <html>
       <head>
